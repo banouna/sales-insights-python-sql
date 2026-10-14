@@ -1,0 +1,343 @@
+
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rapport des ventes</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 1100px;
+                margin: 40px auto;
+                padding: 0 20px;
+                color: #263238;
+                background: #f5f7fa;
+            }
+
+            h1, h2 {
+                color: #17365d;
+            }
+
+            .indicateurs {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+            }
+
+            .carte {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px #00000012;
+            }
+
+            .valeur {
+                font-size: 24px;
+                font-weight: bold;
+                color: #176b50;
+            }
+
+            .section {
+                background: white;
+                padding: 24px;
+                margin-top: 24px;
+                border-radius: 10px;
+                overflow-x: auto;
+            }
+
+            .tableau {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            .tableau th, .tableau td {
+                padding: 10px;
+                border-bottom: 1px solid #dddddd;
+                text-align: right;
+            }
+
+            .tableau th:first-child, .tableau td:first-child {
+                text-align: left;
+            }
+
+            .tableau th {
+                background: #eaf0f6;
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 20px auto;
+            }
+
+            footer {
+                margin: 30px 0;
+                color: #65727c;
+                font-size: 13px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Rapport d'analyse des ventes</h1>
+
+        <p>
+        Ce rapport présente une analyse des ventes à partir des données enregistrées.
+        Il permet d'évaluer les performances commerciales, d'identifier les produits
+        les plus performants et d'observer la répartition du chiffre d'affaires
+        par produit, par ville, par catégorie et par jour.
+        </p>
+        <p>Synthèse des performances commerciales.</p>
+
+        <div class="indicateurs">
+            <div class="carte">
+                <p>Chiffre d'affaires total</p>
+                <div class="valeur">10,885.00 €</div>
+            </div>
+
+            <div class="carte">
+                <p>Quantités vendues</p>
+                <div class="valeur">69</div>
+            </div>
+
+            <div class="carte">
+                <p>Nombre de produits distincts</p>
+                <div class="valeur">5</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Principaux résultats</h2>
+            <p><strong>Meilleur produit :</strong>
+               Ordinateur — 6,800.00 €</p>
+            <p><strong>Meilleure ville :</strong>
+               Paris — 4,285.00 €</p>
+            <p><strong>Meilleure catégorie :</strong>
+               Informatique — 8,560.00 €</p>
+        </div>
+
+        <div class="section">
+            <h2>Analyse par produit</h2>
+            <p>Ce tableau présente les quantités vendues,le chiffre d'affaires et son pourcentage générés.L'ordre est en fonction du chiffre d'affaire du plus important au moins. Il permet de comparer les performances commerciales et d'identifier les produits qui contribuent le plus au chiffre d'affaires total.</p>
+            <table class="dataframe tableau">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>quantite_totale</th>
+      <th>chiffre_affaire_total</th>
+      <th>pourcentage_CA_par_produit</th>
+    </tr>
+    <tr>
+      <th>produit</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ordinateur</th>
+      <td>8</td>
+      <td>6800</td>
+      <td>62.47</td>
+    </tr>
+    <tr>
+      <th>Ecran</th>
+      <td>8</td>
+      <td>1760</td>
+      <td>16.17</td>
+    </tr>
+    <tr>
+      <th>Casque</th>
+      <td>14</td>
+      <td>1050</td>
+      <td>9.65</td>
+    </tr>
+    <tr>
+      <th>Clavier</th>
+      <td>15</td>
+      <td>675</td>
+      <td>6.20</td>
+    </tr>
+    <tr>
+      <th>Souris</th>
+      <td>24</td>
+      <td>600</td>
+      <td>5.51</td>
+    </tr>
+  </tbody>
+</table>
+            <p>Ordinateur vient largement en tête avec un chiffre d'affaires de 6800 Euros puis Ecran avec 1760 après arrive Casque avec 1050 en suite Clavier avec 675 et en fin Souris avec 600 Euros</p>
+        </div>
+
+        <div class="section">
+            <h2>Analyse par ville</h2>
+            <p>Ce tableau compare les ventes réalisées dans les différentes villes. Il permet de repérer les marchés géographiques les plus performants et ceux dans lesquels des actions commerciales pourraient être envisagées.</p>
+            <table class="dataframe tableau">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>quantite_totale</th>
+      <th>chiffre_affaire_total</th>
+    </tr>
+    <tr>
+      <th>ville</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Paris</th>
+      <td>22</td>
+      <td>4285</td>
+    </tr>
+    <tr>
+      <th>Lille</th>
+      <td>18</td>
+      <td>3435</td>
+    </tr>
+    <tr>
+      <th>Lyon</th>
+      <td>13</td>
+      <td>1790</td>
+    </tr>
+    <tr>
+      <th>Marseille</th>
+      <td>16</td>
+      <td>1375</td>
+    </tr>
+  </tbody>
+</table>
+            <p>Paris occupe la première place avec un chiffre d'affaires de 4285 Euros.</p>
+        </div>
+
+        <div class="section">
+            <h2>Analyse par catégorie</h2>
+            <p>Ce tableau regroupe les ventes par catégorie de produits. Il aide à comprendre quelles familles de produits génèrent le plus de chiffre d'affaires et à comparer leur poids dans l'activité commerciale..</p>
+            <table class="dataframe tableau">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>quantite_totale</th>
+      <th>chiffre_affaire_total</th>
+    </tr>
+    <tr>
+      <th>categorie</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Informatique</th>
+      <td>16</td>
+      <td>8560</td>
+    </tr>
+    <tr>
+      <th>Accessoires</th>
+      <td>39</td>
+      <td>1275</td>
+    </tr>
+    <tr>
+      <th>Audio</th>
+      <td>14</td>
+      <td>1050</td>
+    </tr>
+  </tbody>
+</table>
+            <p>La catégorie informatique prend la première place avec un chiffre d'affaires de 8560 Euros.</p>
+        </div>
+        <div class="section">
+            <h2>Chiffre d'affaires par jour</h2>
+            <p>Ce tableau présente les quantités vendues et le chiffre d'affaires pour chaque date. Il permet de suivre l'évolution quotidienne de l'activité et de repérer les journées les plus et les moins performantes.</p>
+                <table class="dataframe tableau">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>quantite_totale</th>
+      <th>chiffre_affaire_total</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2026-09-01</th>
+      <td>7</td>
+      <td>1825</td>
+    </tr>
+    <tr>
+      <th>2026-09-02</th>
+      <td>5</td>
+      <td>575</td>
+    </tr>
+    <tr>
+      <th>2026-09-03</th>
+      <td>5</td>
+      <td>1150</td>
+    </tr>
+    <tr>
+      <th>2026-09-04</th>
+      <td>11</td>
+      <td>860</td>
+    </tr>
+    <tr>
+      <th>2026-09-05</th>
+      <td>8</td>
+      <td>420</td>
+    </tr>
+    <tr>
+      <th>2026-09-06</th>
+      <td>7</td>
+      <td>2650</td>
+    </tr>
+    <tr>
+      <th>2026-09-07</th>
+      <td>6</td>
+      <td>595</td>
+    </tr>
+    <tr>
+      <th>2026-09-08</th>
+      <td>4</td>
+      <td>1790</td>
+    </tr>
+    <tr>
+      <th>2026-09-09</th>
+      <td>9</td>
+      <td>615</td>
+    </tr>
+    <tr>
+      <th>2026-09-10</th>
+      <td>7</td>
+      <td>405</td>
+    </tr>
+  </tbody>
+</table>
+            <p> Nous constatons que le six septembre, l'entreprise a généré beaucoup plus de chiffre d'affaires que les autres jours avec un montant de 2650 Euros</p> 
+        </div>
+        <div class="section">
+            <h2>Graphiques</h2>
+            <p>Ces graphiques illustrent visuellement les tableaux ci-dessus</p>
+            <img src="chiffre_affaire_par_produit.png" alt="chiffre_affaire_par_produit.png">\n<img src="chiffre_affaire_par_ville.png" alt="chiffre_affaire_par_ville.png">\n<img src="chiffre_affaire_par_categorie.png" alt="chiffre_affaire_par_categorie.png">\n<img src="chiffre_affaire_par_jour.png" alt="chiffre_affaire_par_jour.png">\n<img src="part_chiffre_affaire_par_produit.png" alt="part_chiffre_affaire_par_produit.png">
+        </div>
+        <div class="section">
+                <h2>Conclusion</h2>
+                <p>L'analyse des ventes réalisées sur la période étudiée permet d'obtenir une vision globale des performances commerciales. Avec un chiffre d'affaires total de 10 885 € pour 69 unités vendues, les résultats mettent en évidence des différences importantes entre les produits et les catégories.</p>
+                <p>Les ordinateurs constituent le principal moteur du chiffre d'affaires, avec 6 800 €, soit environ 62,5 % du total. La catégorie Informatique occupe également une place prépondérante, avec 8 560 € de chiffre d'affaires. Ces résultats montrent que les ventes reposent principalement sur les produits informatiques.</p>
+                <p>L'analyse par ville permet de comparer les performances commerciales selon la localisation, tandis que l'étude quotidienne met en évidence les variations du chiffre d'affaires au cours de la période. Ces informations peuvent aider à mieux comprendre la répartition des ventes et à identifier les axes d'amélioration.</p>
+                <p>En conclusion, cette analyse constitue une base utile pour orienter les décisions commerciales. Il serait pertinent de renforcer les actions autour des produits les plus performants, d'étudier les opportunités de développement pour les autres catégories et d'approfondir l'analyse des ventes par ville et par période. Une étude sur une période plus longue permettrait de confirmer ces tendances et d'identifier d'éventuelles évolutions saisonnières.</p>
+        </div>
+
+        <footer>
+            Rapport généré automatiquement avec Python, Pandas et Matplotlib.
+        </footer>
+    </body>
+    </html>
+    
