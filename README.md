@@ -95,7 +95,6 @@ Le script lit la requête SQL enregistrée dans le dossier `sql/`, l'exécute su
 
 Les requêtes et leurs résultats documentés sont disponibles dans :
 
-- `sql/requetes.sql`
 - `sql/analyse_sql.md`
 
 ## Principaux axes d'analyse
