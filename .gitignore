@@ -17,3 +17,7 @@ venv/
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# Base de données SQLite générée localement
+data/*.db
+
