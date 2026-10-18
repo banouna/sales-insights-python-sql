@@ -41,6 +41,11 @@ L'analyse des données de ventes fictives a permis d'obtenir les résultats suiv
 
 Ces résultats permettent d'identifier les produits et les villes qui contribuent le plus au chiffre d'affaires et de proposer des pistes d'amélioration commerciale.
 
+## Rapport interactif
+
+[Consulter le rapport complet des ventes](https://banouna.github.io/sales-insights-python-sql/resultats/rapport_ventes.html)
+
+
 Les données sont fictives et utilisées à des fins pédagogiques.
 
 ## Structure du projet
