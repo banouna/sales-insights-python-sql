@@ -30,6 +30,19 @@ Les données utilisées sont fictives et servent de support à un projet personn
 - **HTML et CSS** : présentation du rapport.
 - **Git et GitHub** : versionnement et partage du projet.
 
+## Principaux résultats
+
+L'analyse des données de ventes fictives a permis d'obtenir les résultats suivants :
+
+- **Chiffre d'affaires total :** 10 885 €.
+- **Produit générant le plus de chiffre d'affaires :** l'ordinateur, avec 6 800 €.
+- **Ville générant le plus de chiffre d'affaires :** Paris, avec 4 285 €.
+- **Journée avec le chiffre d'affaires le plus élevé :** le 6 septembre 2026, avec 2 650 €.
+
+Ces résultats permettent d'identifier les produits et les villes qui contribuent le plus au chiffre d'affaires et de proposer des pistes d'amélioration commerciale.
+
+Les données sont fictives et utilisées à des fins pédagogiques.
+
 ## Structure du projet
 
 ```text
